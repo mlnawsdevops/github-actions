@@ -1,11 +1,11 @@
-name: conditions
+name: 03-conditions
 on: [push]
 jobs:
   job-1:
     runs-on: ubuntu-latest
     steps:
       - name: step-1
-        if: github.ref == 'refs/heads/feature-**'
+        if: github.ref == 'refs/heads/feature-**' # condition
         run: echo "branch-feature"
       - name: step-2
         if: github.ref == 'refs/heads/main'

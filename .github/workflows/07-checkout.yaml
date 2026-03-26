@@ -1,0 +1,11 @@
+name: 07-checkout 
+on: [push]
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v5 # going to specific branch 
+
+      - name: display the files
+        run: ls -la
