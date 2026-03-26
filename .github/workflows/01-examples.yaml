@@ -1,4 +1,4 @@
-name: HelloWorld # workflow name
+name: 01-HelloWorld # workflow name
 on: [push] # when to trigger this pipeline. we can trigger on push, pull, PR and some other events like creating PR, updating PR, creating branches, creating issues. Can be: push, pull_request, workflow_dispatch (manual), schedule (cron), etc.
 jobs: # tasks/stages to execute
   simple-job:  # job name. You can have multiple jobs in one workflow.

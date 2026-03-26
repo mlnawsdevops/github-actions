@@ -1,4 +1,4 @@
-name: parallel
+name: 05-parallel
 on: [push]
 jobs:
   job-1: #job name should be unique
