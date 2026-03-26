@@ -1,9 +1,9 @@
-name: HelloWorld
-on: [push]
-jobs:
-  simple-job:
-    runs-on: ubuntu-latest
-    steps:
+name: HelloWorld # workflow name
+on: [push] # when to trigger this pipeline. we can trigger on push, pull, PR and some other events like creating PR, updating PR, creating branches, creating issues. Can be: push, pull_request, workflow_dispatch (manual), schedule (cron), etc.
+jobs: # tasks/stages to execute
+  simple-job:  # job name. You can have multiple jobs in one workflow.
+    runs-on: ubuntu-latest # runner/agent to execute the job 
+    steps: # individual steps to perform
       - name: step-1
         run: echo "step-1"
       - name: step-2

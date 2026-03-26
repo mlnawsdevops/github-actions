@@ -1,0 +1,31 @@
+name: Inputs
+on:
+  workflow_dispatch: #manual trigger
+    inputs:
+      logLevel:
+        description: 'Log Level'
+        required: true
+        default: 'warning'
+        type: choice
+        options:
+          - info
+          - warning
+          - debug
+      print_tags:
+        description: 'True to print to STDOUT'
+        required: true
+        type: boolean
+      tags:
+        description: 'Test scenario tags'
+        required: true
+        type: string
+      environment:
+        description: 'Environment to run tests against'
+        required: true
+        type: environment
+jobs:
+  print_tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print the input tag to STDOUT
+        run: echo "The tags are {{ inputs.tags }}"
