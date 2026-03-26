@@ -1,6 +1,6 @@
 name: Inputs
 on:
-  workflow_dispatch: #manual trigger
+  workflow_dispatch: #manual trigger - branch
     inputs:
       logLevel:
         description: 'Log Level'
@@ -28,4 +28,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print the input tag to STDOUT
-        run: echo "The tags are {{ inputs.tags }}"
+        run: echo The tags are {{ inputs.tags }}
